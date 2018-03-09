@@ -12,7 +12,7 @@
     left: 50%;
     width: 3px;
     margin-left: -1.5px;
-    background-color: #eeeeee;
+    background-color: #ff2000;
 }
 
 .timeline > li {
@@ -88,7 +88,7 @@
     font-size: 1.4em;
     line-height: 50px;
     color: #fff;
-    background-color: #999999;
+    background-color: #5dff00;
 }
 
 .timeline > li.timeline-inverted > .timeline-panel {
