@@ -29,7 +29,7 @@
                             <td>Host</td><td>{{ @server->host }}</td>
                         </tr>
                         <tr>
-                            <td>SSL/TLS</td><td>443</td>
+                            <td>Port SSL/TLS</td><td>443</td>
                         </tr>
                         <tr>
                             <td>Port Dropbear</td><td>22507, 109, 110, 80</td>
@@ -38,7 +38,7 @@
                             <td>Port OpenSSH</td><td>143, 22</td>
                         </tr>
                         <tr>
-                            <td>Squid Proxy</td><td>3128, 8080, 8000</td>
+                            <td>Squid Proxy</td><td>8000, 8080, 3128</td>
                         </tr>
                         <tr>
                             <td>Harga</td><td>{{ @server->price }}</td>
@@ -46,7 +46,7 @@
                     </table>
                     <div class="panel-footer text-center">
                         <a href="{{ @URI.'/'.@server->id }}" class="btn btn-primary"><i class="fa fa-shopping-cart fa-fw"></i> Create SSH</a>
-                        <a href="http://{{ @server->host }}:81/client.ovpn" class="btn btn-default"><i class="fa fa-download fa-fw"></i>OpenVPN Config</a>
+                        <a href="http://{{ @server->host }}:81/client.ovpn" class="btn btn-default"><i class="fa fa-download fa-fw"></i>Config OpenVPN</a>
                     </div>
                 </div>
             </div>
