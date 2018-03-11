@@ -4,11 +4,11 @@
             <h1 class="page-header">
                 <check if="{{ @seller->id }}">
                     <true>
-                        Edit Seller Account
+                        Edit Akun Pelanggan
                         <a href="/home/admin/seller" class="btn btn-default pull-right"><i class="fa fa-arrow-left fa-fw"></i> Kembali</a>
                     </true>
                     <false>
-                        Tambah Seller
+                        Tambah Pelanggan
                     </false>
                 </check>
             </h1>
@@ -23,7 +23,7 @@
         <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <i class="fa fa-user fa-fw"></i> Account Details
+                    <i class="fa fa-user fa-fw"></i> Detail Akun
                 </div>
                 <div class="panel-body">
                     <form role="form" action="{{ @URI }}" method="POST">
@@ -53,10 +53,10 @@
                             <true>
                                 <check if="{{ @seller->active==1 }}">
                                     <true>
-                                        <a href="{{ @URI.'/active/0' }}" class="btn btn-warning">Lock</a>
+                                        <a href="{{ @URI.'/active/0' }}" class="btn btn-warning">Kunci Akun</a>
                                     </true>
                                     <false>
-                                        <a href="{{ @URI.'/active/1' }}" class="btn btn-success">Unlock</a>
+                                        <a href="{{ @URI.'/active/1' }}" class="btn btn-success">Buka Akun</a>
                                     </false>
                                 </check>
                                 <a href="{{ @URI.'/delete' }}" class="btn btn-danger hapus">Hapus</a>
@@ -85,7 +85,7 @@
                                 <label>Masukan Ulang Password</label>
                                 <input class="form-control" placeholder="Re-enter Password" name="passwordconfirmation" type="password" required>
                             </div>
-                            <button class="btn btn-primary">Simpan</button>
+                            <button class="btn btn-primary">Simpan Now</button>
                         </form>
                     </div>
                 </div>
