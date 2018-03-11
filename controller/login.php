@@ -14,7 +14,7 @@ class Login extends Controller {
 		$user->load(array('username=?',$name));
 		if ( ! $user->dry()) {
 			if ( ! $user->active == 1) {
-				$this->flash('Akun Anda DiKunci Sementara');
+				$this->flash('Akun Anda DiKunci Sementara Ya Boss');
 				$f3->reroute('/');
 			}
 			elseif (Check::pass($pass, $user->password)) {
@@ -22,7 +22,7 @@ class Login extends Controller {
 				$f3->reroute('/home');
 			}
 		}
-		$this->flash('Username / Password Salah, Silahkan coba lagi');
+		$this->flash('Username / Password Yang Anda Masukkan Salah, Silahkan coba lagi Atau Hub Admin');
 		$f3->reroute('/');
 	}
 
