@@ -41,7 +41,7 @@ class Seller extends \Home {
 		if ($seller->dry()) {
 			$seller->load(array('username=?',$f3->get('POST.username')));
 			if ( ! $seller->dry()) {
-				$this->flash('User sudah terdaftar');
+				$this->flash('Akun User sudah terdaftar');
 				$f3->reroute('/home/admin/seller/add');
 			}
 		}
@@ -69,7 +69,7 @@ class Seller extends \Home {
 	function Delete($f3) {
 		$seller = $this->loadSeller();
 		$seller->erase();
-		$this->flash('Seller Berhasil Dihapus','success');
+		$this->flash('Pelanggan Berhasil Dihapus','success');
 		$f3->reroute('/home/admin/seller/');
 	}
 
