@@ -124,7 +124,7 @@ class Server extends \Home {
 		$server = $this->loadServer();
 		$account = $this->loadUser($server);
 		$account->erase();
-		$this->flash('Account Berhasil Dihapus','success');
+		$this->flash('Akun Anda Berhasil Dihapus','success');
 		$f3->reroute('/home/admin/server/'.$server->id.'/account');
 	}
 // "create\:$svr['user']\:$svr['pass']\:$svr['uid']\:$svr['gid']\:$svr['real']\:$svr['home']\:$svr['shell']\:$svr['min']\:$svr['max']\:$svr['warn']\:$svr['inactive']\:$svr['expire']";
