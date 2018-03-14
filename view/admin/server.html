@@ -39,7 +39,7 @@
                             <input class="form-control" placeholder="192.168.1.1 atau www.example-server.com" name="host" type="text" value="{{ @server->host }}" required>
                         </div>
                         <div class="form-group">
-                            <label>Harga Sewa</label>
+                            <label>Harga Sewa / Bulan</label>
                             <div class="input-group">
                                 <span class="input-group-addon">Rp. </span>
                                 <input class="form-control" placeholder="10000" name="price" type="number" step="100" value="{{ @server->price }}" required>
@@ -53,10 +53,10 @@
                         <check if="{{ @server->id }}">
                             <check if="{{ @server->active==1 }}">
                                 <true>
-                                    <a href="{{ @URI.'/active/0' }}" class="btn btn-warning">Kunci</a>
+                                    <a href="{{ @URI.'/active/0' }}" class="btn btn-warning">Lock</a>
                                 </true>
                                 <false>
-                                    <a href="{{ @URI.'/active/1' }}" class="btn btn-success">Buka Kunci</a>
+                                    <a href="{{ @URI.'/active/1' }}" class="btn btn-success">Unlock</a>
                                 </false>
                             </check>
                             <a href="{{ @URI.'/delete' }}" class="btn btn-danger hapus">Hapus</a>
