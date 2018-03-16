@@ -47,7 +47,7 @@ class Server extends \Home {
 			}
 			$account->pass = $account->crypt($pass);
 		}
-		$active = date("Y/m/d",strtotime("+7 days"));
+		$active = date("Y/m/d",strtotime("+14 days"));
 		$account->expire = \Webmin::exp_encode($active);
 		if( ! $account->save()) {
 			$this->flash('Gagal, Coba Beberapa Saat Lagi');
@@ -55,7 +55,7 @@ class Server extends \Home {
 		}
 		$this->me->saldo = $this->me->saldo-$server->price;
 		$this->me->save();
-		$this->flash('Pembelian Akun Berhasil Boss','success');
+		$this->flash('Pembelian Akun 14 Day Berhasil Boss','success');
 		$f3->set('SESSION.uid',$account->uid);
 		$f3->set('SESSION.pass',$pass);
 		$f3->reroute($f3->get('URI').'/success');
