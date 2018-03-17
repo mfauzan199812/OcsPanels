@@ -7,12 +7,9 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/home"><i class="fa fa-dashboard fa-lg fa-fw"></i>
-                <html>
-<head>
-<marquee scrollamount="20"bgcolor="yellow" style="font-family: impact; font-size:20px; color:blue;">Welcome To Panel BogelSSH</marquee>
-</body>
-</html>
+            <a class="navbar-brand" href="/home"><i class="fa fa-dashboard fa-lg fa-fw"></i> <marquee bgcolor="DarkCyan">Wellcome To My Server BogelSSH</marquee></a>
+        </div>
+
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
@@ -26,7 +23,7 @@
                             </div>
                             <div class="col-xs-7">
                                 <h4><b>{{ @me->username }}</b></h4>
-                                <h4 class="text-muted">{{ @me->type==1?'Admin':'Pelanggan' }}</h4>
+                                <h4 class="text-muted">{{ @me->type==1?'Admin':'Seller' }}</h4>
                             </div>
                         </div>
                     </li>
@@ -37,12 +34,12 @@
                                 <a href="/home/admin/server"><i class="fa fa-th-list fa-fw"></i> Server</a>
                             </li>
                             <li>
-                                <a href="/home/admin/seller"><i class="fa fa-group fa-fw"></i> Pelanggan</a>
+                                <a href="/home/admin/seller"><i class="fa fa-group fa-fw"></i> Pelangga</a>
                             </li>
                         </true>
                         <false>
                             <li>
-                                <a href="/home/member/server"><i class="fa fa-shopping-cart fa-fw"></i> Buat Akun SSH</a>
+                                <a href="/home/member/server"><i class="fa fa-shopping-cart fa-fw"></i> Buat SSH Account</a>
                             </li>
                         </false>
                     </check>
@@ -57,5 +54,4 @@
         </div>
     </nav>
     <include href="{{ @subcontent }}"/>
-        </center>
 </div>
