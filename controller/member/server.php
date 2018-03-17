@@ -55,7 +55,7 @@ class Server extends \Home {
 		}
 		$this->me->saldo = $this->me->saldo-$server->price;
 		$this->me->save();
-		$this->flash('Pembuatan Akun Premium Berhasil ','success');
+		$this->flash('Succes ','success');
 		$f3->set('SESSION.uid',$account->uid);
 		$f3->set('SESSION.pass',$pass);
 		$f3->reroute($f3->get('URI').'/success');
