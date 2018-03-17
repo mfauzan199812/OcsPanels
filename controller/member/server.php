@@ -31,11 +31,11 @@ class Server extends \Home {
 		$server = $this->loadServer();
 		$account = new \Webmin($server);
 		if (($saldo = $this->me->saldo)<$server->price) {
-			$this->flash('Saldo Anda Kurang, Hub Admin utk Deposit');
+			$this->flash('Saldo Anda Kurang Sob, Harap Hub Admin Untuk Deposit');
 			$f3->reroute($f3->get('URI'));
 		}
 		if ( ! $account->check($f3->get('POST.user'))) {
-			$this->flash('User Sudah Terdaftar, Coba yang Lain');
+			$this->flash('User Sudah Terdaftar Sob, Coba yang Lain');
 			$f3->reroute($f3->get('URI'));
 		}
 		$account->copyFrom('POST');
@@ -55,7 +55,7 @@ class Server extends \Home {
 		}
 		$this->me->saldo = $this->me->saldo-$server->price;
 		$this->me->save();
-		$this->flash('Pembelian Akun 14 Day Berhasil Boss','success');
+		$this->flash('Pembuatan Akun Premium Berhasil ','success');
 		$f3->set('SESSION.uid',$account->uid);
 		$f3->set('SESSION.pass',$pass);
 		$f3->reroute($f3->get('URI').'/success');
