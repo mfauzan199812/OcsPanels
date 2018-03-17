@@ -44,9 +44,11 @@
                             <td>Harga</td><td>{{ @server->price }}</td>
                         </tr>
                     </table>
+                    <center>
                     <div class="panel-footer text-center">
                         <a href="{{ @URI.'/'.@server->id }}" class="btn btn-primary"><i class="fa fa-shopping-cart fa-fw"></i> Create SSH</a><br>
                         <a href="http://{{ @server->host }}:81/client.ovpn" class="btn btn-default"><i class="fa fa-download fa-fw"></i>Config OpenVPN</a>
+                    </center>
                     </div>
                 </div>
             </div>
